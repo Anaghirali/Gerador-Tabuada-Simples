@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mdelo de exercicio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <header>
+        <h1>Tabuada</h1>
+    </header>
+
+    <div class="quadrado">
+    <section>
+        <div>
+
+        </div>
+
+        <div> 
+            <input type="number" name="numero" id="numer">
+            <Input type='button' value='Exibir Tabuada' onclick='exibir()'>
+        </div>
+       
+        <div class="select">
+         <select name='' id='seltabuada' size='10'></select>
+           
+        </div>
+
+
+        <div id='msg'> </div>
+             
+       
+    </section>
+    </div>
+
+        <footer>
+            <p>
+                &copy Colégio Técnico de Campinas</p>
+        </footer>
+ 
+ <script>
+    
+       let exibir = () =>{
+       let number = window.document.querySelector('input#numer')
+       let tabuada = window.document.querySelector('select#seltabuada')
+       let msg = window.document.querySelector('select#msg')
+       
+       let num = Number(number.value)  
+       if (number.value.length = 0){
+        msg.innerHTML='digite um numero'
+       } else{ 
+         
+       tabuada.innerHTML=""
+       for(var cont=1; cont<=10; cont++){
+           let item = document.createElement('option')
+           item.text = `${cont} X ${num} = ${cont*num}`
+          tabuada.appendChild(item)
+       }  
+      }
+     }
+
+
+
+    
+
+
+ </script>
+</body>
+</html>
